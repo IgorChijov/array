@@ -2,66 +2,42 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int [] numbers = new int[3];
-        numbers[0] = 1;
-        numbers[1] = 2;
-        numbers[2] = 3;
-        double [] secondNumbers = {1.57, 7.654, 9.986};
-        int [] temperature = {1, 3, 6, 5, 10};
+        int[] money =  {55555, 66666, 77777, 88888, 99999};
+        int sum = 0;
+        for (int i = 0; i < money.length; i++) {
+            sum += money[i];
+        }
+        System.out.println("Сумма выплат за месяц составила " + sum + " рублей");
 
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i]);
-            if (i < numbers.length - 1){
-                System.out.print(", ");
+
+        int[] arr = {1415, 6535, 14, 1456, 764, 9032, 83};
+        int min = money[0];
+        int max = money[0];
+        for (int i = 0; i < money.length; i++) {
+            if (money[i] < min) {
+                min = money[i];
             }
+            if (money[i] > max) {
+                max = money[i];
+            }
+        }
+        System.out.println("Минимальная сумма составила " + min + " , а максимальная " + max);
+
+
+        int[] arr1 = {123, 616, 5256, 9535, 10, 14};
+        int sum1 = 0;
+        for (int i = 0; i < arr1.length; i++) {
+            sum1 += arr1[i];
+        }
+        double average = sum1 / 4d;
+        System.out.println("Средняя сумма затрат за месяц составила " + average);
+
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
         System.out.println();
 
-        for (int i = 0; i < secondNumbers.length; i++) {
-            System.out.print(secondNumbers[i]);
-            if (i < secondNumbers.length - 1){
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
 
-        for (int i = 0; i < temperature.length; i++) {
-            System.out.print(temperature[i]);
-            if (i < temperature.length - 1){
-                System.out.print(", ");
-            }
-        }
-
-        System.out.println();
-        for (int i = numbers.length - 1; i >= 0; i--) {
-            System.out.print(numbers[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
-
-        System.out.println();
-        for (int i = secondNumbers.length - 1; i >= 0; i--) {
-            System.out.print(secondNumbers[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
-
-        System.out.println();
-        for (int i = temperature.length - 1; i >= 0; i--) {
-            System.out.print(temperature[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
-
-        System.out.println();
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] % 2 != 0) {
-                numbers[i] = numbers [i] + 1;
-            }
-        }
-        System.out.println(Arrays.toString(numbers));
     }
 }
